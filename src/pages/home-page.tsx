@@ -1,8 +1,8 @@
 import AppTitle from "@/components/app-title";
 import { Progress } from "@/components/ui/progress";
-import CardDashboard from "@/containers/CardDashboard";
+import CardDashboard from "@/containers/card-dashboard";
 
-function Home() {
+function HomePage() {
   return (
     <div className="flex flex-col gap-6 w-full">
       <AppTitle title="Dashboard" />
@@ -18,4 +18,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
