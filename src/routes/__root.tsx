@@ -1,3 +1,4 @@
+import { AppContainer } from "@/components/app-container";
 import AppHeader from "@/components/app-header";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
@@ -11,7 +12,9 @@ export const Route = createRootRoute({
         <AppSidebar />
         <SidebarInset>
           <AppHeader />
-          <Outlet />
+          <AppContainer>
+            <Outlet />
+          </AppContainer>
         </SidebarInset>
       </SidebarProvider>
       <TanStackRouterDevtools />
