@@ -1,6 +1,7 @@
-import { Bell, CircleUser } from "lucide-react";
+import { Bell } from "lucide-react";
 import { Button } from "./ui/button";
 import { SidebarTrigger } from "./ui/sidebar";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 function AppHeader() {
   return (
@@ -8,11 +9,23 @@ function AppHeader() {
       <div className="flex items-center gap-2 px-4 justify-between w-full">
         <SidebarTrigger className="-ml-1" />
         <div className="flex items-center">
-          <Button variant="ghost" size="icon" className="cursor-pointer">
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label="notification"
+            className="cursor-pointer"
+          >
             <Bell />
           </Button>
-          <Button variant="ghost" size="icon" className="cursor-pointer">
-            <CircleUser />
+          <Button
+            variant="ghost"
+            aria-label="profile"
+            className="cursor-pointer"
+          >
+            <Avatar>
+              <AvatarImage src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-isolated-background-avatar-profile-picture-man_1293239-4841.jpg?semt=ais_hybrid&w=740" />
+              <AvatarFallback>DL</AvatarFallback>
+            </Avatar>
           </Button>
         </div>
       </div>

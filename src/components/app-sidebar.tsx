@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { TitleName } from "@/components/title-name";
+import { AppLogo } from "@/components/app-logo";
 import {
   Sidebar,
   SidebarContent,
@@ -24,7 +24,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TitleName />
+        <AppLogo />
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

@@ -6,7 +6,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-export function TitleName() {
+export function AppLogo() {
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -18,9 +18,7 @@ export function TitleName() {
             <Atom className="size-4" />
           </div>
           <div className="grid flex-1 text-left ml-2 text-sm leading-tight">
-            <span className="truncate text-xl font-bold">
-              Manage App
-            </span>
+            <span className="truncate text-xl font-bold">Manage App</span>
           </div>
         </SidebarMenuButton>
       </SidebarMenuItem>
