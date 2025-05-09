@@ -10,7 +10,7 @@ function HomePage() {
         <CardDashboard title="Total Domain" value={20}></CardDashboard>
         <CardDashboard title="Total Mailbox" value={120}></CardDashboard>
         <CardDashboard title="Total Storage">
-          <Progress value={40} className="my-3" />
+          <Progress value={40} className="my-3" aria-label="progres-storage" />
         </CardDashboard>
         <CardDashboard title="Service Status" value={"Active"}></CardDashboard>
       </div>

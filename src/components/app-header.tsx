@@ -2,6 +2,7 @@ import { Bell } from "lucide-react";
 import { Button } from "./ui/button";
 import { SidebarTrigger } from "./ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import Profile from "@/assets/img/profile.jpg";
 
 function AppHeader() {
   return (
@@ -23,7 +24,7 @@ function AppHeader() {
             className="cursor-pointer"
           >
             <Avatar>
-              <AvatarImage src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-isolated-background-avatar-profile-picture-man_1293239-4841.jpg?semt=ais_hybrid&w=740" />
+              <AvatarImage src={Profile} alt="account" />
               <AvatarFallback>DL</AvatarFallback>
             </Avatar>
           </Button>
