@@ -27,7 +27,7 @@ export default function ActivityDashboard() {
                   {activity.action}
                 </span>
               </div>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-muted-foreground hidden md:block">
                 {activity.time}
               </span>
             </div>
