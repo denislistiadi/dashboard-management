@@ -18,7 +18,7 @@ export default function CardDashboard({
   children,
 }: CardDashboardProps) {
   return (
-    <Card className="flex flex-row col-span-1 gap-4 p-4 items-center rounded-md">
+    <Card className="flex flex-row col-span-12 md:col-span-6 lg:col-span-3 gap-4 p-4 items-center rounded-md">
       {Icon && (
         <div
           className={cn("rounded-lg p-3 text-white", `bg-${activeColor}-500`)}
@@ -34,3 +34,5 @@ export default function CardDashboard({
     </Card>
   );
 }
+
+
