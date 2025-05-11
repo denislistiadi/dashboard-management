@@ -1,6 +1,6 @@
 import AppTitle from "@/components/app-title";
 import { Button } from "@/components/ui/button";
-import CardBilling from "@/containers/card-billing";
+import CardLayout from "@/containers/card-layout";
 import { TableData } from "@/containers/table-data";
 
 const summaryBill = [
@@ -48,17 +48,23 @@ function BillingPage() {
     <div className="flex flex-col gap-6 w-full">
       <AppTitle title="Billing" />
       <div className="grid grid-cols-12 gap-6">
-        <CardBilling title="Billing Summary" className="col-span-12 lg:col-span-7">
+        <CardLayout
+          title="Billing Summary"
+          className="col-span-12 lg:col-span-7"
+        >
           <div className="flex flex-col gap-2 text-sm">
-            {summaryBill.map((item) => (
-              <div className="flex justify-between gap-4">
+            {summaryBill.map((item, idx) => (
+              <div key={idx} className="flex justify-between gap-4">
                 <p className="text-muted-foreground">{item.title}</p>
                 <p className="text-primary/90 font-medium">{item.value}</p>
               </div>
             ))}
           </div>
-        </CardBilling>
-        <CardBilling title="Payment Method" className="col-span-12 lg:col-span-5">
+        </CardLayout>
+        <CardLayout
+          title="Payment Method"
+          className="col-span-12 lg:col-span-5"
+        >
           <div className="flex flex-col gap-2 text-sm">
             <p className="text-muted-foreground">Credit Card</p>
             <p className="text-primary/90 font-medium">**** **** **** 1234</p>
@@ -66,8 +72,11 @@ function BillingPage() {
           <Button className="mt-4" variant="outline">
             Update Payment Method
           </Button>
-        </CardBilling>
-        <CardBilling title="Billing Settings" className="col-span-12 lg:col-span-4">
+        </CardLayout>
+        <CardLayout
+          title="Billing Settings"
+          className="col-span-12 lg:col-span-4"
+        >
           <div className="flex flex-col gap-2 text-sm">
             <p className="text-muted-foreground">Billing Address</p>
             <p className="text-primary/90 font-medium">
@@ -77,12 +86,15 @@ function BillingPage() {
               Update Billing Address
             </Button>
           </div>
-        </CardBilling>
-        <CardBilling title="Billing History" className="col-span-12 lg:col-span-8">
+        </CardLayout>
+        <CardLayout
+          title="Billing History"
+          className="col-span-12 lg:col-span-8"
+        >
           <div className="flex flex-col gap-2 text-sm">
             <TableData column={columns} data={invoices} />
           </div>
-        </CardBilling>
+        </CardLayout>
       </div>
     </div>
   );

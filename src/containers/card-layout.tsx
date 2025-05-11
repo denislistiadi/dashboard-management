@@ -1,17 +1,17 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-interface CardBillingProps {
+interface CardLayoutProps {
   className?: string;
   title: string;
   children: React.ReactNode;
 }
 
-export default function CardBilling({
+export default function CardLayout({
   className,
   title,
   children,
-}: CardBillingProps) {
+}: CardLayoutProps ) {
   return (
     <Card className={cn("rounded-md", className)}>
       <CardHeader className="text-primary/90 font-semibold text-lg">
