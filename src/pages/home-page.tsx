@@ -1,5 +1,6 @@
 import AppTitle from "@/components/app-title";
 import { Progress } from "@/components/ui/progress";
+import ActivityDashboard from "@/containers/activity-dashboard";
 import CardDashboard from "@/containers/card-dashboard";
 import DonutChartDashboard from "@/containers/donutchart-dashboard";
 import LineChartDashboard from "@/containers/linechart-dashboard";
@@ -17,6 +18,7 @@ function HomePage() {
         <CardDashboard title="Service Status" value={"Active"}></CardDashboard>
         <LineChartDashboard />
         <DonutChartDashboard />
+        <ActivityDashboard />
       </div>
     </div>
   );
