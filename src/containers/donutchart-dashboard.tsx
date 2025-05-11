@@ -26,7 +26,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function DonutChartDashboard() {
+export default function DonutChartDashboard() {
   return (
     <Card className="col-span-12 lg:col-span-4 rounded-md">
       <CardHeader className="items-center pb-0">

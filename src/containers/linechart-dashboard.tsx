@@ -29,7 +29,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function LineChartDashboard() {
+export default function LineChartDashboard() {
   const uniqueKeys = [
     ...new Set(chartData.flatMap((item) => Object.keys(item))),
   ];

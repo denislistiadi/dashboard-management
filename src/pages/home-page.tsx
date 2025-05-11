@@ -1,8 +1,8 @@
-import { LineChartDashboard } from "@/containers/linechart-dashboard";
 import AppTitle from "@/components/app-title";
 import { Progress } from "@/components/ui/progress";
 import CardDashboard from "@/containers/card-dashboard";
-import { DonutChartDashboard } from "@/containers/donutchart-dashboard";
+import DonutChartDashboard from "@/containers/donutchart-dashboard";
+import LineChartDashboard from "@/containers/linechart-dashboard";
 
 function HomePage() {
   return (
