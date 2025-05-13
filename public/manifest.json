@@ -1,6 +1,6 @@
 {
-  "short_name": "TanStack App",
-  "name": "Create TanStack App Sample",
+  "short_name": "Management App",
+  "name": "Management Dashboard",
   "icons": [
     {
       "src": "favicon.ico",
