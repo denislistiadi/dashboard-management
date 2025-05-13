@@ -2,7 +2,13 @@ import { Bell } from "lucide-react";
 import { Button } from "./ui/button";
 import { SidebarTrigger } from "./ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import Profile from "@/assets/img/profile.jpg";
+import Profile from "@/assets/img/profile.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 function AppHeader() {
   return (
@@ -18,16 +24,25 @@ function AppHeader() {
           >
             <Bell />
           </Button>
-          <Button
-            variant="ghost"
-            aria-label="profile"
-            className="cursor-pointer"
-          >
-            <Avatar>
-              <AvatarImage src={Profile} alt="account" />
-              <AvatarFallback>DL</AvatarFallback>
-            </Avatar>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                aria-label="profile"
+                className="cursor-pointer"
+              >
+                <Avatar>
+                  <AvatarImage src={Profile} alt="account" />
+                  <AvatarFallback>DL</AvatarFallback>
+                </Avatar>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Setting</DropdownMenuItem>
+              <DropdownMenuItem>Logout</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
