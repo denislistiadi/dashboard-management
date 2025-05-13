@@ -28,10 +28,10 @@ export function TableData({ column, data }: TableDataProps) {
           <TableRow key={idx}>
             {column.map((col) =>
               col.key === "action" ? (
-                <div className="flex gap-3 my-2">
+                <td key={idx} className="flex gap-3 my-2">
                   <Button size="sm" variant="ghost" className="text-blue-600">Edit</Button>
                   <Button size="sm" variant="ghost" className="text-red-600">Delete</Button>
-                </div>
+                </td>
               ) : (
                 <TableCell key={col.key}>
                   {item[col.key as keyof typeof item]}
