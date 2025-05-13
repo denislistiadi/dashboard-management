@@ -10,6 +10,12 @@ const summaryBill = [
   { title: "Next Billing Date", value: "10 Juni 2025" },
 ];
 
+const settingBill = [
+  { title: "Billing Address", value: "123 Main St, City, Country" },
+  { title: "Billing Email", value: "email@mail.co" },
+  { title: "Billing Phone", value: "+62 123 456 789" },
+];
+
 const invoices = [
   {
     invoice: "Invoice #12345",
@@ -77,13 +83,15 @@ function BillingPage() {
           title="Billing Settings"
           className="col-span-12 lg:col-span-4"
         >
-          <div className="flex flex-col gap-2 text-sm">
-            <p className="text-muted-foreground">Billing Address</p>
-            <p className="text-primary/90 font-medium">
-              123 Main St, City, Country
-            </p>
+          <div className="flex flex-col gap-3 text-sm">
+            {settingBill.map((item, idx) => (
+              <div key={idx} className="flex flex-col gap-1">
+                <p className="text-muted-foreground">{item.title}</p>
+                <p className="text-primary/90 font-medium">{item.value}</p>
+              </div>
+            ))}
             <Button className="mt-4" variant="outline">
-              Update Billing Address
+              Update Billing Settings
             </Button>
           </div>
         </CardLayout>
